@@ -20,6 +20,7 @@ function StartGameScreen({ onConfirmNumber }) {
   //this hook will look the device dimensions and whatever they changes
   //width and hight will be updated like the orientation of the device
   const { width, height } = useWindowDimensions();
+  const marginTopDistance = height < 380 ? 30 : 100;
 
   function numberInputHandler(enteredText) {
     setEnteredNumber(enteredText);
@@ -74,7 +75,7 @@ function StartGameScreen({ onConfirmNumber }) {
 export default StartGameScreen;
 
 //const deviceHeight = Dimensions.get("window").height;
-const marginTopDistance = height < 380 ? 30 : 100;
+
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
